@@ -14,4 +14,8 @@ public class OrderProvider {
 
         return order;
     }
+
+    public static Order getOrder(UUID orderId, UUID productId) {
+        return new Order(orderId, new Product(productId, BigDecimal.TEN, "myProduct"));
+    }
 }
